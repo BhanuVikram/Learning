@@ -1,12 +1,15 @@
 let imgConts = document.querySelectorAll(".imgCont");
-let transitionDuration = 0.6;
+let figcaptions = document.querySelectorAll("figcaption");
+let activeFigcaption = document.querySelector(".imgCont.active figcaption");
 
-document.querySelector(".imgCont.active figcaption").style.display = "initial";
+activeFigcaption.style.display = "initial";
+
+let transitionDuration = 0.6;
 
 imgConts.forEach((imgCont) => {
   imgCont.style.transitionDuration = transitionDuration + "s";
 
-  imgCont.onclick = function (e) {
+  imgCont.addEventListener("click", function (e) {
     let clickedImg = e.target;
 
     imgConts.forEach((imgCont) => {
@@ -15,12 +18,14 @@ imgConts.forEach((imgCont) => {
 
     clickedImg.classList.add("active");
 
-    document.querySelectorAll("figcaption").forEach((caption) => {
+    figcaptions.forEach((caption) => {
       caption.style.display = "none";
     });
 
+    let clickedImgFigcaption = clickedImg.querySelector("figcaption");
+
     setTimeout(() => {
-      clickedImg.querySelector("figcaption").style.display = "initial";
-    }, transitionDuration * 1000 - 400);
-  };
+      clickedImgFigcaption.style.display = "initial";
+    }, transitionDuration * 1000 + 100);
+  });
 });
