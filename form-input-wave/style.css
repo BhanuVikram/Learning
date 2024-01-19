@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #4682b4;
+}
+
+.wrapper {
+  background-color: #284e6b;
+  padding: 10px 40px 28px 40px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+h3 {
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+label {
+  position: absolute;
+  bottom: 12px;
+}
+
+input {
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  width: 300px;
+  padding: 16px 0;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #aed8e7;
+}
+
+a {
+  color: #add8e6;
+  text-decoration: none;
+}
+
+.letter {
+  position: relative;
+  top: 0px;
+  transition-duration: 0.08s;
+}
+
+.letter.active {
+  top: -24px;
+  color: #add8e6;
+}
