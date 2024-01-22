@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin: 80px 0 40px 0;
+}
+
+.faq {
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 20px 40px;
+  margin-bottom: 24px;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(128, 128, 128, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.faq.active::before, .faq.active::after {
+  content: "\f075";
+  font-size: 120px;
+  font-family: "Font Awesome 5 Free";
+  color: lightskyblue;
+  opacity: 0.3;
+  position: absolute;
+  top: -12px;
+  left: -20px;
+  transform: rotateY(180deg);
+  z-index: 0;
+}
+
+.faq.active::after {
+  color: rgb(135, 250, 173);
+  transform: none;
+  top: 28px;
+  left: 40px;
+}
+
+.q-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 550px;
+  z-index: 5;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+span {
+  margin-left: 28px;
+}
+
+.answer {
+  position: relative;
+  display: none;
+  z-index: 5;
+}
+
+.faq.active .answer {
+  display: inherit;
+}
+
+.close {
+  font-size: 24px;
+  color: grey;
+  display: none;
+}
+
+.faq.active .close {
+  display: initial;
+}
+
+.faq.active .open {
+  display: none;
+}
