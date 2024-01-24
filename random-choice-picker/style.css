@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #2b89f1;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2rem;
+  margin-top: 200px;
+  color: #fff;
+}
+
+textarea {
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 500px;
+  height: 100px;
+  resize: none;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
+  margin-top: 30px;
+}
+
+/* This styling is for choices created and displayed using JS */
+.choice {
+  font-size: 14px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 24px;
+  background-color: #f0942b;
+  padding: 8px 20px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.choice.active {
+  background-color: #263c75;
+}
+
+.replay button {
+  font-size: 13px;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin-top: 30px;
+  color: #263c75;
+  background-color: #d1e2f7;
+  cursor: pointer;
+}
