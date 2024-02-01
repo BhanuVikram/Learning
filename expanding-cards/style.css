@@ -6,19 +6,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px;
+  padding: 6rem;
 }
 
 .imgCont {
   display: flex;
   align-items: flex-end;
-  padding: 32px;
+  padding: 2rem;
   width: 9%;
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 32px;
+  border-radius: 2rem;
   /* transition-duration: 0.6s; */
   /* Transition Duration is being controlled in JS */
   cursor: pointer;
@@ -30,6 +30,6 @@
 
 figcaption {
   display: none;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #fff;
 }
